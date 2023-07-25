@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .body {
+      height: auto;
+      margin: 5px;
+      border: 1px solid black;
+      padding: 10px;
+    }
+    .first {
+      text-align: right;
+      font-size: small;
+    }
+    .mainHeading {
+      text-align: center;
+    }
+     .logo-container{
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      text-align: center;
+    }
+    .registered {
+      text-align: right;
+    }
+    .registrar {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+    }
+    .rightContainer {
+      margin-top: 16%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem 0 1rem;
+    }
+    .registered {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+    }
+    .upperContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 1rem 0 1rem;
+    }
+
+    .deputyregistrar {
+        text-align: center;
+    }
+    .lastPara {
+      font-size: smaller;
+    }
+
+    .detail{
+        text-align: justify;
+    }
+    .watermark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+  </style>
+  <body>
+    <div class="body">
+        <p class="first">आवेदन संख्या:- {{data class="applicationID"}}</p>
+        <h2 class="mainHeading">
+          उत्तराखण्ड-संस्कृत-विश्वविद्यालय:,हरिद्वारम्
+          <br />
+          UTTARAKHAND SANSKRIT UNIVERSITY,HARIDWAR
+        </h2>
+        <div class="logo-container">
+            <img class="logo" src="logo.png"  alt="logo" />
+            <img src="./logo-with-text.jpg" class="watermark" alt="logo" />
+            <b>
+              <p>प्रवजन प्रमाणपत्रम्</p>
+              <p>MIGRATION CERTIFICATE</p>
+            </b>
+          </div>
+        <div class="upperContainer"><div class="serial">
+            <p>क्रमसंख्या:-{{data.serialno}}</p>
+          </div>
+          <div class="registered">
+            <p>पंजीयित</p>
+            
+          </div>
+        </div>
+        <div class="detail">
+          <p>
+            श्री/कुo/श्रीमती{{data.applicantName}}पितृनाम{{data.fatherOrHusbandName}}
+            जन्मतिथि:{{data.birthDate}} नामांकनसंख्या{{data.sanskritRegistrationNumber}} विज्ञाप्यते
+            यदस्य/अस्या:{{data.sanskritCourseName}},{{data.sanskritSubjectName}} विश्वविद्यालयान्तरप्रवजनेअस्य
+            विश्वविद्यालयस्य न काप्यनुपपत्ति:। विश्वविद्यालयेअस्मिन् नियमित/व्यक्तिगत/भूतपूर्वच्छात्ररूपेण{{data.sessionAcademicSession}}सत्रे समुत्तीर्णा/अनुत्तीर्णान्तिमा परीक्षाअसीत्।        
+          </p>
+        </div>
+        <div class="rightContainer">
+          <div class="downDetail">
+            <p>हरिद्वारम्(उत्तराखण्डम्)</p>
+            <p>Haridwar(Uttarakhand)</p>
+          </div>
+          <div class="deputyregistrar">
+            <b>
+              <p>उपकुलसचिव </p>
+              <p>Deputy Registrarp
+                <br>
+                <br>
+                उत्तराखण्ड-संस्कृत-विश्वविद्यालयस्य, 
+                हरिद्वारम्</p>
+            </b>
+          </div>
+        </div>
+        <p>तिथि :- {{data.completedAt}}</p>
+      </div>
+    </div>
+    <p class="lastPara">
+      <b
+        >यह प्रमाण पत्र डिजिटली हस्ताक्षरित है एवं विधि मान्य है । <br />
+        इस प्रमाण पत्र को आवेदन पत्र संख्या का उपयोग कर
+        http://eservices.uk.gov.in से सत्यापित किया जा सकता है ।
+      </b>
+    </p>
+  </body>
+</html>
